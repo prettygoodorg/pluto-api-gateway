@@ -20,7 +20,7 @@ repositories {
 sourceSets {
 	main {
 		resources {
-			srcDir 'pluto-api-secret'
+			srcDir 'pluto-api-gateway-secret'
 		}
 	}
 }

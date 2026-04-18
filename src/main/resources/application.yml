@@ -1,0 +1,15 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: pluto-api-gateway
+  profiles:
+    active: local
+
+spring.cloud.gateway.server.webflux:
+  routes:
+    - id: auth-service
+      uri: ${auth-service.url}
+      predicates:
+        - Path=/auth/**, /users/**
