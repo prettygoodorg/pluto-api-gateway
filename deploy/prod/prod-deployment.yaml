@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: api-gw
-          image: ghcr.io/prettygoodorg/pluto-api-gw:prod-latest
+          image: ghcr.io/prettygoodorg/pluto-api-gateway:prod-latest
           ports:
             - containerPort: 8000
           imagePullPolicy: Always
