@@ -16,7 +16,7 @@ spec:
         app: dev-api-gw
     spec:
       containers:
-        - name: dev-api-gw
+        - name: api-gw
           image: ghcr.io/prettygoodorg/pluto-api-gateway:dev-latest
           ports:
             - containerPort: 8000
