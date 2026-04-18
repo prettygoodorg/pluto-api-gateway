@@ -1,0 +1,26 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: pluto-api-gateway
+  profiles:
+    active: local
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, info, livenessState, readinessState
+
+spring.cloud.gateway.server.webflux:
+  routes:
+    - id: auth-service
+      uri: ${auth-service.url}
+      predicates:
+        - Path=/auth/**, /users/**

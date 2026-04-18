@@ -1,0 +1,3 @@
+[submodule "pluto-api-gateway-secret"]
+	path = pluto-api-gateway-secret
+	url = https://github.com/prettygoodorg/pluto-api-gateway-secret.git
