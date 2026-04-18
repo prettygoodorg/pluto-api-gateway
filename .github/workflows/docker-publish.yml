@@ -104,5 +104,5 @@ jobs:
           [[ -z "$MANIFEST" ]] && { echo "Deployment manifest not found" >&2; exit 1; }
           
           kubectl apply -f deploy/${{ env.ENV }}/
-          kubectl set image -f deploy/${{ env.ENV }}/$MANIFEST api=$IMAGE
+          kubectl set image -f deploy/${{ env.ENV }}/$MANIFEST api-gw=$IMAGE
           kubectl rollout status -f deploy/${{ env.ENV }}/$MANIFEST -n pluto --timeout=180s
