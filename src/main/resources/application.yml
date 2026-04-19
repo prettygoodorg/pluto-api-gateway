@@ -39,4 +39,4 @@ spring.cloud.gateway.server.webflux:
     - id: auth-service
       uri: ${auth-service.url}
       predicates:
-        - Path=/auth/**, /users/**
+        - Path=/auth/**, /users/**, /oauth2/**, /login/**
