@@ -19,6 +19,22 @@ management:
         include: health, info, livenessState, readinessState
 
 spring.cloud.gateway.server.webflux:
+  globalcors:
+    cors-configurations:
+      '[/**]':
+        allowedOrigins:
+          - http://localhost:3000
+          - https://pluto.wichan.dev
+          - https://pluto-surface-wichan7-wichan7s-projects.vercel.app
+        allowedMethods:
+          - GET
+          - POST
+          - PUT
+          - PATCH
+          - DELETE
+          - OPTIONS
+        allowedHeaders:
+          - "*"
   routes:
     - id: auth-service
       uri: ${auth-service.url}
